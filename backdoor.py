@@ -23,7 +23,7 @@ class ClientThread(threading.Thread):
             self.csocket.send(banner)
             while True:
                 data = self.csocket.recv(1024)
-                if data.decode() == "inhoFTW!\n":
+                if data.decode() == "ENTER YOUR PASSWORD HERE\n":
                     self.csocket.send(b"Correct Password!\n")
                     while True:
                         data = self.csocket.recv(1024)
